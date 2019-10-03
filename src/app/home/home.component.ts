@@ -20,16 +20,21 @@ export class HomeComponent implements OnInit {
 
     let dialogData = new DialogData(); 
 
-    dialogData.title = 'New Dislog'
     dialogData.content = 'This is the text'
-    dialogData.button1 = true
-    dialogData.button1_text = 'OK'
-    dialogData.button2 = false
-    dialogData.button2_text = 'Cancel'
+    dialogData.button1Text = 'OK'
+    dialogData.button2Text = 'Cancel'
 
     const dialogRef = this.dialog.open(DialogComponent, {
       data: dialogData
     });
+
+    dialogRef.componentInstance.onButton1Click.subscribe(() => {
+      console.log("button 1 clicked");
+    })
+
+    dialogRef.componentInstance.onButton2Click.subscribe(() => {
+      console.log("butto2 clcked")
+    })
   }
 
 }

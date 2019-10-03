@@ -1,8 +1,7 @@
-<h1 mat-dislog-title>{{data.title}}</h1>
 <div mat-dialog-content>
-    <p>{{data.content}}</p>
+    <p id="dialog-content">{{data.content}}</p>
 </div>
 <div mat-dialog-actions>
-    <button mat-button *ngIf='data.button1'>{{data.button1_text}}</button>
-    <button mat-button *ngIf='data.button2'>{{data.button2_text}}</button>
+    <button id="dialog-button1" mat-button (click)="button1Click()">{{data.button1Text}}</button>
+    <button id="dialog-button2" mat-button (click)="button2Click()">{{data.button2Text}}</button>
 </div>

@@ -1,8 +1,5 @@
 export class DialogData {
-    title: string;
     content: string;
-    button1: boolean;
-    button1_text: string;
-    button2: boolean;
-    button2_text: string;
+    button1Text: string;
+    button2Text: string;
 }
